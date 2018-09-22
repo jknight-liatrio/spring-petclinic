@@ -418,6 +418,24 @@
             </plugin>
         </plugins>
     </reporting>
+    <repositories>
+        <repository>
+          <releases>
+            <enabled>false</enabled>
+            <updatePolicy>always</updatePolicy>
+            <checksumPolicy>warn</checksumPolicy>
+          </releases>
+          <snapshots>
+            <enabled>true</enabled>
+            <updatePolicy>never</updatePolicy>
+            <checksumPolicy>fail</checksumPolicy>
+          </snapshots>
+          <id>nexus</id>
+          <name>Local Nexus</name>
+          <url>http://nexus:8081/nexus/content/groups/public</url>
+          <layout>default</layout>
+        </repository>
+  </repositories>
 
     <distributionManagement>
         <snapshotRepository>
